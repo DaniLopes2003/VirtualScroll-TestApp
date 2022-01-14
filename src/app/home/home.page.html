@@ -13,8 +13,33 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <cdk-virtual-scroll-viewport itemSize="43" minBufferPx="900" maxBufferPx="1350">
+    <ion-list lines="full">
+      <ion-list-header class="ion-text-right ion-padding-end">
+        <ion-label>
+          Results
+        </ion-label>
+      </ion-list-header>
+      <ion-item button detail="true" appClickTracking analyticsElementName="openDocument" *cdkVirtualFor="let document of items">
+        <ion-icon slot="start" name="airplane-outline"></ion-icon>
+        <ion-label>
+          <h2 class="ion-text-wrap">
+           {{document.name}}
+          </h2>
+          <p>
+            ghjgjg
+          </p>
+          <p>
+            zututu
+          </p>
+          <p>
+            hzkjkzk
+          </p>
+        </ion-label>
+        <ion-note slot="end">
+          22.10.2003
+        </ion-note>
+      </ion-item>
+    </ion-list>
+  </cdk-virtual-scroll-viewport>
 </ion-content>
